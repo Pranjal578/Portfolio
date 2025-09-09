@@ -29,8 +29,7 @@ It showcases my **skills, projects, education, hobbies, and contact details** in
 
 ## 📷 Preview
 
-![Portfolio Screenshot](./screenshot.png)  
-*(Add a screenshot of your portfolio and rename it `screenshot.png` in the repo)*
+![Portfolio Screenshot](Screenshot.png)
 
 ---
 
