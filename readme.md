@@ -1,23 +1,23 @@
-# 🌐 Pranjal Shukla - Interactive Portfolio
+# Pranjal Shukla - Interactive Portfolio
 
 This is my personal interactive portfolio website built with **HTML5, CSS3, and JavaScript**.  
 It showcases my **skills, projects, education, hobbies, and contact details** in a modern glassmorphism design with animations.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🌟 Responsive design with animations
-- 🧑‍💻 About me, Education, Projects, and Skills sections
-- 🎨 Glassmorphism & gradient UI
-- 📱 Mobile-friendly navigation
-- ⬆️ Floating scroll-to-top button
-- 🎭 Interactive hover effects
-- 🔗 GitHub & LinkedIn integration
+- Responsive design with animations
+- About me, Education, Projects, and Skills sections
+- Glassmorphism & gradient UI
+- Mobile-friendly navigation
+- Floating scroll-to-top button
+- Interactive hover effects
+- GitHub & LinkedIn integration
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **HTML5**
 - **CSS3** (Flexbox, Grid, Animations)
@@ -27,13 +27,13 @@ It showcases my **skills, projects, education, hobbies, and contact details** in
 
 ---
 
-## 📷 Preview
+## Preview
 
 ![Portfolio Screenshot](Screenshot.png)
 
 ---
 
-## 🔧 Installation & Usage
+## Installation & Usage
 
 1. Clone the repository:
 
