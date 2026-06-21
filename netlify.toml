@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Single Page Application redirect rule
+# Redirects all traffic to index.html so React Router / client-side routing handles the routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
