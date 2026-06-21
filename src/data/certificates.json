@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "title": "Jaipuria Quiz League 2025",
+    "issuer": "Jaipuria Institute of Management",
+    "cardNumber": "5412 8820 2025 1001",
+    "theme": "theme-carbon",
+    "validThru": "10/25",
+    "description": "National level quiz competition evaluating general knowledge, business intelligence, and logical capabilities.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214032_My Files.jpg",
+    "issueDate": "Oct 10, 2025",
+    "credentialId": "JQL-2025-9304"
+  },
+  {
+    "id": 2,
+    "title": "Sustainable Resource Management (Grade A)",
+    "issuer": "IIT Guwahati / E&ICT Academy",
+    "cardNumber": "5412 7510 2025 2002",
+    "theme": "theme-sapphire",
+    "validThru": "03/25",
+    "description": "Advanced specialization in environmental management, resource scaling, and policy constraints completed with distinction.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214048_My Files.jpg",
+    "issueDate": "March 2025",
+    "credentialId": "IITG-SRM-A-8371"
+  },
+  {
+    "id": 3,
+    "title": "Sustainable Resource Management",
+    "issuer": "IIT Guwahati / E&ICT Academy",
+    "cardNumber": "5412 3640 2025 3003",
+    "theme": "theme-emerald",
+    "validThru": "03/25",
+    "description": "Specialized certification from E&ICT Academy at IIT Guwahati covering resource optimization, lifecycle analysis, and sustainable engineering.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214048_My Files.jpg",
+    "issueDate": "March 2025",
+    "credentialId": "IITG-SRM-B-2938"
+  },
+  {
+    "id": 4,
+    "title": "Career Essentials in Cybersecurity",
+    "issuer": "Microsoft & LinkedIn",
+    "cardNumber": "5412 5590 2025 4004",
+    "theme": "theme-platinum",
+    "validThru": "10/25",
+    "description": "Foundational security training covering standard defensive protocols, cryptography basics, identity validation, and endpoint monitoring.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214238_LinkedIn.jpg",
+    "issueDate": "Oct 14, 2025",
+    "credentialId": "MS-CYBER-9842"
+  },
+  {
+    "id": 5,
+    "title": "Career Essentials in System Administration",
+    "issuer": "Microsoft & LinkedIn",
+    "cardNumber": "5412 9130 2025 5005",
+    "theme": "theme-amethyst",
+    "validThru": "10/25",
+    "description": "System architecture training specializing in command line tools, automated provisioning, active directory setups, and infrastructure logging.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214252_LinkedIn.jpg",
+    "issueDate": "Oct 14, 2025",
+    "credentialId": "MS-SYSADMIN-3294"
+  },
+  {
+    "id": 6,
+    "title": "Career Essentials in Generative AI",
+    "issuer": "Microsoft & LinkedIn",
+    "cardNumber": "5412 4470 2025 6006",
+    "theme": "theme-ruby",
+    "validThru": "10/25",
+    "description": "Foundational training in transformers, text embeddings, LLM alignment strategies, prompt design engineering, and generative ethics.",
+    "link": "https://www.linkedin.com/in/pranjal-shukla-profile/",
+    "image": "/certificates/Screenshot_20260621_214305_LinkedIn.jpg",
+    "issueDate": "Oct 13, 2025",
+    "credentialId": "MS-GENAI-1934"
+  }
+]

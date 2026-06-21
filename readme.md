@@ -1,41 +1,16 @@
-# Pranjal Shukla - Interactive Portfolio
+# React + Vite
 
-This is my personal interactive portfolio website built with **HTML5, CSS3, and JavaScript**.  
-It showcases my **skills, projects, education, hobbies, and contact details** in a modern glassmorphism design with animations.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- Responsive design with animations
-- About me, Education, Projects, and Skills sections
-- Glassmorphism & gradient UI
-- Mobile-friendly navigation
-- Floating scroll-to-top button
-- Interactive hover effects
-- GitHub & LinkedIn integration
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Technologies Used
+## Expanding the ESLint configuration
 
-- **HTML5**
-- **CSS3** (Flexbox, Grid, Animations)
-- **JavaScript (Vanilla)**
-- **FontAwesome** (icons)
-- **Google Fonts** (Montserrat & Poppins)
-
----
-
-## Preview
-
-![Portfolio Screenshot](Screenshot.png)
-
----
-
-## Installation & Usage
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/Pranjal578/portfolio.git
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
