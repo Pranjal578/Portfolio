@@ -22,7 +22,7 @@ import projectsData from './data/projects.json';
 import certificatesData from './data/certificates.json';
 
 function App() {
-  const [viewMode, setViewMode] = useState('3d');
+  const [viewMode, setViewMode] = useState('2d');
   const [isMobile, setIsMobile] = useState(false);
   const [activeMedia, setActiveMedia] = useState(null);
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -33,6 +33,8 @@ function App() {
     'Enter connection parameters below:'
   ]);
   const [sending, setSending] = useState(false);
+  const [activeCertCat, setActiveCertCat] = useState('All');
+  const [activeProjCat, setActiveProjCat] = useState('All');
 
   // Resize listener to enforce 2D mobile fallback on smaller screens
   useEffect(() => {
@@ -394,12 +396,61 @@ function App() {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeInUp}
           >
-            <h2 className="section-title gradient-text">Credentials & Registries</h2>
+            <h2 className="section-title gradient-text">Credentials &amp; Registries</h2>
             <p className="section-subtitle">Hover over the cards to flip them and view verified credential details.</p>
           </motion.div>
 
+          {/* Category filter tabs */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '36px', justifyContent: 'center' }}
+          >
+            {['All', 'Agentic AI', 'Data Science', 'Cybersecurity', 'Cloud & DevOps', 'Other'].map(cat => {
+              const isActive = activeCertCat === cat;
+              const count = cat === 'All' ? certificatesData.length : certificatesData.filter(c => c.category === cat).length;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCertCat(cat)}
+                  style={{
+                    padding: '8px 18px',
+                    borderRadius: '999px',
+                    border: isActive ? '1.5px solid hsl(var(--primary))' : '1.5px solid hsl(var(--border))',
+                    background: isActive ? 'hsl(var(--primary) / 0.15)' : 'hsl(var(--surface) / 0.6)',
+                    color: isActive ? 'hsl(var(--primary))' : 'hsl(var(--text-muted))',
+                    fontWeight: isActive ? '700' : '500',
+                    fontSize: '0.82rem',
+                    cursor: 'pointer',
+                    backdropFilter: 'blur(8px)',
+                    transition: 'all 0.25s ease',
+                    boxShadow: isActive ? '0 0 16px hsl(var(--primary) / 0.25)' : 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    letterSpacing: '0.02em'
+                  }}
+                >
+                  {cat}
+                  <span style={{
+                    background: isActive ? 'hsl(var(--primary))' : 'hsl(var(--border))',
+                    color: isActive ? 'white' : 'hsl(var(--text-muted))',
+                    borderRadius: '999px',
+                    padding: '1px 7px',
+                    fontSize: '0.72rem',
+                    fontWeight: '700'
+                  }}>{count}</span>
+                </button>
+              );
+            })}
+          </motion.div>
+
           <div className="certificates-grid">
-            {certificatesData.map(cert => (
+            {certificatesData
+              .filter(cert => activeCertCat === 'All' || cert.category === activeCertCat)
+              .map(cert => (
               <div key={cert.id} className="cert-card-container">
                 <div className="cert-card-inner">
                   {/* Front card layout */}
@@ -476,8 +527,57 @@ function App() {
             <p className="section-subtitle">Explore a config-driven index of custom autonomous code applications.</p>
           </motion.div>
 
+          {/* Category filter tabs */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '36px', justifyContent: 'center' }}
+          >
+            {['All', 'Agentic AI', 'Data Science', 'Cybersecurity', 'Full Stack'].map(cat => {
+              const isActive = activeProjCat === cat;
+              const count = cat === 'All' ? projectsData.length : projectsData.filter(p => p.category === cat).length;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => setActiveProjCat(cat)}
+                  style={{
+                    padding: '8px 18px',
+                    borderRadius: '999px',
+                    border: isActive ? '1.5px solid hsl(var(--secondary))' : '1.5px solid hsl(var(--border))',
+                    background: isActive ? 'hsl(var(--secondary) / 0.15)' : 'hsl(var(--surface) / 0.6)',
+                    color: isActive ? 'hsl(var(--secondary))' : 'hsl(var(--text-muted))',
+                    fontWeight: isActive ? '700' : '500',
+                    fontSize: '0.82rem',
+                    cursor: 'pointer',
+                    backdropFilter: 'blur(8px)',
+                    transition: 'all 0.25s ease',
+                    boxShadow: isActive ? '0 0 16px hsl(var(--secondary) / 0.25)' : 'none',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    letterSpacing: '0.02em'
+                  }}
+                >
+                  {cat}
+                  <span style={{
+                    background: isActive ? 'hsl(var(--secondary))' : 'hsl(var(--border))',
+                    color: isActive ? 'white' : 'hsl(var(--text-muted))',
+                    borderRadius: '999px',
+                    padding: '1px 7px',
+                    fontSize: '0.72rem',
+                    fontWeight: '700'
+                  }}>{count}</span>
+                </button>
+              );
+            })}
+          </motion.div>
+
           <div className="projects-grid">
-            {projectsData.map(project => (
+            {projectsData
+              .filter(project => activeProjCat === 'All' || project.category === activeProjCat)
+              .map(project => (
               <div key={project.id} className="project-card glass" style={{ borderRadius: '24px', overflow: 'hidden' }}>
                 <div className="project-info" style={{ padding: '30px', display: 'flex', flexDirection: 'column', height: '100%' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
@@ -487,6 +587,18 @@ function App() {
                       ))}
                     </div>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <span style={
+                        {fontSize: '0.65rem', fontWeight: 700, padding: '3px 9px', borderRadius: '999px',
+                        background: project.category === 'Agentic AI' ? 'hsl(var(--primary)/0.15)' :
+                          project.category === 'Cybersecurity' ? 'hsl(0 80% 55% / 0.15)' :
+                          project.category === 'Data Science' ? 'hsl(160 70% 45% / 0.15)' :
+                          'hsl(var(--secondary)/0.15)',
+                        color: project.category === 'Agentic AI' ? 'hsl(var(--primary))' :
+                          project.category === 'Cybersecurity' ? 'hsl(0 80% 65%)' :
+                          project.category === 'Data Science' ? 'hsl(160 70% 55%)' :
+                          'hsl(var(--secondary))'
+                        }
+                      }>{project.category}</span>
                       <span className={`status-pulse ${project.isLive ? '' : 'offline'}`}></span>
                       <span style={{ fontSize: '0.7rem', color: 'hsl(var(--text-muted))', fontWeight: 600 }}>
                         {project.isLive ? 'LIVE' : 'GITHUB'}
